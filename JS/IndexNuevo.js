@@ -15,7 +15,9 @@ if(id_user >0){
     }else{
         $("#sesionregistrate").addClass("d-none");
         $("#sesioninicia").addClass("d-none");
-        $("#categoriasi").addClass("d-none");
+        $("#infocuenta").removeClass("d-none");
+        $("#admins").removeClass("d-none");
+        $("#cuenn").html(email)
     
     }
     
@@ -27,7 +29,7 @@ if(id_user >0){
 
 $.ajax({
     type: "POST",
-    url: "https://is-fcfm.alwaysdata.net/api/producto/",
+    url: "http://uanlis.alwaysdata.net/api/producto/",
     data:{action:"getAllPN"},
     dataType: 'json',
     success: function(reponse){
@@ -40,8 +42,8 @@ debugger
 
     if(i<3){
         $("#splide-slide01").append(`<div class="col-lg-4 col-md-3 col-sm-12  pt-2">
-        <div class="imagen text-center" style="border-color: white !important;;">
-          <img src="../IMG/photoshop.png" style="height: 200px; width: 200px;">
+        <div class="hei imagen text-center" style="border-color: white !important;;">
+          <img src="http://uanlis.alwaysdata.net/api/producto${data[i].imagen}" style="height: 200px; width: 200px;">
         </div>
         <div class="stats mt-2 text-center">
           <div class="mx-auto p-price" style="color: white;">
@@ -59,8 +61,8 @@ debugger
     }
     if(i>=3 && i<6){
         $("#splide-slide02").append(`<div class="col-lg-4 col-md-3 col-sm-12  pt-2">
-        <div class="imagen text-center" style="border-color: white !important;;">
-          <img src="../IMG/photoshop.png" style="height: 200px; width: 200px;">
+        <div class="hei imagen text-center" style="border-color: white !important;;">
+          <img src="http://uanlis.alwaysdata.net/api/producto${data[i].imagen}" style="height: 200px; width: 200px;">
         </div>
         <div class="stats mt-2 text-center">
           <div class="mx-auto p-price" style="color: white;">
@@ -78,8 +80,8 @@ debugger
     }
     if(i>=6 && i<9){
         $("#splide-slide03").append(`<div class="col-lg-4 col-md-3 col-sm-12  pt-2">
-        <div class="imagen text-center" style="border-color: white !important;;">
-          <img src="../IMG/photoshop.png" style="height: 200px; width: 200px;">
+        <div class="hei imagen text-center" style="border-color: white !important;;">
+          <img src="http://uanlis.alwaysdata.net/api/producto${data[i].imagen}" style="height: 200px; width: 200px;">
         </div>
         <div class="stats mt-2 text-center">
           <div class="mx-auto p-price" style="color: white;">
@@ -117,14 +119,14 @@ debugger
 
     },error:function(x,y,z){
 
-    //  location.href = "IndexNuevo.php";
+
       
     }
   });
 
   $.ajax({
     type: "POST",
-    url: "https://is-fcfm.alwaysdata.net/api/producto/",
+    url: "http://uanlis.alwaysdata.net/api/producto/",
     data:{action:"getAllPN2"},
     dataType: 'json',
     success: function(reponse){
@@ -138,7 +140,7 @@ debugger
     $("#recient").append(` <div class="col mb-5 zoom">
     <div class="card h-100" style="background-color: #383a41; color: white;">
       <!-- Product image-->
-      <img class="card-img-top" src="../IMG/reactredux.png" alt="..." style="object-fit: cover; height:158px;">
+      <img class="hei card-img-top" src="http://uanlis.alwaysdata.net/api/producto${data[i].imagen}" alt="..." style="object-fit: cover; height:158px;">
       <!-- Product details-->
       <div class="card-body p-4">
         <div class="text-center">
@@ -163,7 +165,7 @@ debugger
 
     },error:function(x,y,z){
 
-    //  location.href = "IndexNuevo.php";
+
       
     }
   });
@@ -195,7 +197,7 @@ debugger
     
             $.ajax({
                 type: "POST",
-                url: "https://is-fcfm.alwaysdata.net/api/auth/",
+                url: "http://uanlis.alwaysdata.net/api/auth/",
                 data: {action:"signIn",email:email,password:password},
                 dataType: "json",
                 success: function (response) {
@@ -218,7 +220,7 @@ debugger
                        toastr.success('Iniciaste sesion ', 'Acabas de iniciar sesion');
 
 
-
+                       location.href='IndexNuevo.html'
 
                     
 
@@ -228,6 +230,7 @@ debugger
                         $("#categoriasi").addClass("d-none");
 
                         toastr.success('Iniciaste sesion ', 'Acabas de iniciar sesion');
+                        location.href='IndexNuevo.html'
                     }
 
 
@@ -271,13 +274,13 @@ debugger
             //toastr.success('Bien', 'Te has registrado correctamente');
             $.ajax({
                 type: "POST",
-                url: "https://is-fcfm.alwaysdata.net/api/auth/",
+                url: "http://uanlis.alwaysdata.net/api/auth/",
                 data: {action:"signUp",username:name,email:email,password:password},
                 dataType: "json",
                 success: function (response) {
                     debugger
                    
-
+                    location.href='IndexNuevo.html'
                         toastr.success('Bien', 'Cuenta creada');
 debugger
                         

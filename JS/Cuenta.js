@@ -6,19 +6,21 @@ $(document).ready(function () {
   var email = localStorage.getItem("email");
     debugger
 
-if(id_user >0){
-    if(is_role == "CLIENT"){
-        $("#sesionregistrate").addClass("d-none");
-        $("#sesioninicia").addClass("d-none");
-        $("#infocuenta").removeClass("d-none");
-        $("#cuenn").html(email)
-    
-    }else{
-        $("#sesionregistrate").addClass("d-none");
-        $("#sesioninicia").addClass("d-none");
-        $("#categoriasi").addClass("d-none");
-    
-    }
+    if(id_user >0){
+        if(is_role == "CLIENT"){
+            $("#sesionregistrate").addClass("d-none");
+            $("#sesioninicia").addClass("d-none");
+            $("#infocuenta").removeClass("d-none");
+            $("#cuenn").html(email)
+        
+        }else{
+            $("#sesionregistrate").addClass("d-none");
+            $("#sesioninicia").addClass("d-none");
+            $("#infocuenta").removeClass("d-none");
+            $("#admins").removeClass("d-none");
+            $("#cuenn").html(email)
+        
+        }
     
 }else{
 
@@ -28,7 +30,7 @@ if(id_user >0){
 
 $.ajax({
     type: "POST",
-    url: "https://is-fcfm.alwaysdata.net/api/user/",
+    url: "http://uanlis.alwaysdata.net/api/user/",
     data:{action:"getuse",id:id_user},
     dataType: 'json',
     success: function(reponse){
@@ -45,7 +47,7 @@ $.ajax({
 
     },error:function(x,y,z){
 debugger
-    //  location.href = "IndexNuevo.php";
+
       
     }
   });
@@ -74,7 +76,7 @@ debugger
 
         $.ajax({
             type: "POST",
-            url: "https://is-fcfm.alwaysdata.net/api/auth/",
+            url: "http://uanlis.alwaysdata.net/api/auth/",
             data: {action:"signIn",email:email,password:password},
             dataType: "json",
             success: function (response) {
@@ -145,7 +147,7 @@ $("#rerto").submit(function (e) {
         //toastr.success('Bien', 'Te has registrado correctamente');
         $.ajax({
             type: "POST",
-            url: "https://is-fcfm.alwaysdata.net/api/auth/",
+            url: "http://uanlis.alwaysdata.net/api/auth/",
             data: {action:"signUp",username:name,email:email,password:password},
             dataType: "json",
             success: function (response) {
@@ -196,23 +198,21 @@ debugger
     }else{
         $.ajax({
             type: "POST",
-            url: "https://is-fcfm.alwaysdata.net/api/user/",
+            url: "http://uanlis.alwaysdata.net/api/user/",
             data:{action:"updateUser",id:id_user,username:names,password:passwordn,oldpassword:password},
             headers: {"Authorization":"Bearer " + token},
             dataType: 'json',
             success: function(reponse){
                 debugger
-                const {message,data}= reponse;
+                const {message,data}= reponse;    
         
-            var ir =    data[0].id;     
-        
-        
+            location.href='Cuenta.html'
                  
                debugger
         
             },error:function(x,y,z){
         debugger
-            //  location.href = "IndexNuevo.php";
+      
               
             }
           });

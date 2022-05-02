@@ -4,19 +4,21 @@ debugger
   var email = localStorage.getItem("email");
     debugger
 
-if(id_user >0){
-    if(is_role == "CLIENT"){
-        $("#sesionregistrate").addClass("d-none");
-        $("#sesioninicia").addClass("d-none");
-        $("#infocuenta").removeClass("d-none");
-        $("#cuenn").html(email)
-    
-    }else{
-        $("#sesionregistrate").addClass("d-none");
-        $("#sesioninicia").addClass("d-none");
-        $("#categoriasi").addClass("d-none");
-    
-    }
+    if(id_user >0){
+      if(is_role == "CLIENT"){
+          $("#sesionregistrate").addClass("d-none");
+          $("#sesioninicia").addClass("d-none");
+          $("#infocuenta").removeClass("d-none");
+          $("#cuenn").html(email)
+      
+      }else{
+          $("#sesionregistrate").addClass("d-none");
+          $("#sesioninicia").addClass("d-none");
+          $("#infocuenta").removeClass("d-none");
+          $("#admins").removeClass("d-none");
+          $("#cuenn").html(email)
+      
+      }
     
 }else{
 
@@ -35,20 +37,26 @@ var io = parseInt(it);
     /// PARA MOSTRAR UN PRODUCTO
     $.ajax({  
       type: "GET",
-      url: "https://is-fcfm.alwaysdata.net/api/producto/index.php",
+      url: "http://uanlis.alwaysdata.net/api/producto/index.php",
       data: {action:'getp',id:io},
       dataType: 'json',
       success: function(data){
      var e = data.data;
+     debugger
         $("#nombr").html(e.nombre);
         $("#despi").html(e.description);
         $("#showp").html(e.precio);
+        $("#showp").html(e.precio);
+        $("#im").append(`<img class="text-center" src="http://uanlis.alwaysdata.net/api/producto${e.imagen}"
+        style="object-fit:initial; height: 300px; width: 300px;">
+    `);
 
+        http://uanlis.alwaysdata.net/api/producto${data[i].imagen}
        var pp = e.id_categoria;
 
        $.ajax({  
         type: "GET",
-        url: "https://is-fcfm.alwaysdata.net/api/categoria/index.php",
+        url: "http://uanlis.alwaysdata.net/api/categoria/index.php",
         data: {action:'all'},
         dataType: 'json',
         success: function(data2){
@@ -67,8 +75,8 @@ var io = parseInt(it);
   debugger
         },error:function(x,y,z){
     debugger
-        //  location.href = "IndexNuevo.php";
-          
+      
+        
         }
       });
 
@@ -77,9 +85,7 @@ var io = parseInt(it);
 
 debugger
       },error:function(x,y,z){
-  debugger
-      //  location.href = "IndexNuevo.php";
-        
+  debugger    
       }
     });
   
@@ -141,7 +147,7 @@ var boolean = true;
 
       $.ajax({
           type: "POST",
-          url: "https://is-fcfm.alwaysdata.net/api/auth/",
+          url: "http://uanlis.alwaysdata.net/api/auth/",
           data: {action:"signIn",email:email,password:password},
           dataType: "json",
           success: function (response) {
@@ -204,7 +210,7 @@ debugger
       //toastr.success('Bien', 'Te has registrado correctamente');
       $.ajax({
           type: "POST",
-          url: "https://is-fcfm.alwaysdata.net/api/auth/",
+          url: "http://uanlis.alwaysdata.net/api/auth/",
           data: {action:"signUp",username:name,email:email,password:password},
           dataType: "json",
           success: function (response) {

@@ -9,7 +9,7 @@ debugger
     $.ajax({
         type: "GET",
         enctype: "multipart/form-data",
-        url: "https://is-fcfm.alwaysdata.net/api/producto/index.php",
+        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
         data: {action:'getAllUS'}, 
         dataType:"json",
         success: function (reponse) {
@@ -24,12 +24,13 @@ for( var i = 0 ; i < 15 ; i++){
    
     <tr>
         <th>#</th>
-        <th>${data[i].id}</th>
         <th>Correo</th>
+        <th>Username</th>
+       
     </tr>
     <tr>
         <td>1</td>
-        <td>${data[i].email}l</td>
+        <td>${data[i].email}</td>
         <td>${data[i].username}</td>
     </tr>
   
@@ -49,7 +50,7 @@ for( var i = 0 ; i < 15 ; i++){
 
     $.ajax({
         type: "GET",
-        url: "https://is-fcfm.alwaysdata.net/api/categoria/index.php",
+        url: "http://uanlis.alwaysdata.net/api/categoria/index.php",
         data:{action:"allCategories"},
         dataType: 'json',
         success: function(data){
@@ -68,7 +69,7 @@ for( var i = 0 ; i < 15 ; i++){
     
         },error:function(x,y,z){
     debugger
-        //  location.href = "IndexNuevo.php";
+    
           
         }
       });
@@ -103,7 +104,7 @@ debugger
         $.ajax({
             type: "POST",
             enctype: "multipart/form-data",
-            url: "https://is-fcfm.alwaysdata.net/api/producto/",
+            url: "http://uanlis.alwaysdata.net/api/producto/",
             data: formData, 
             dataType:"json",
             headers: {"Authorization":"Bearer " + token},
@@ -112,10 +113,7 @@ debugger
             success: function (response) {
                debugger
             
-
-
-
-               alert(response);
+               document.getElementById("formProducto").reset();
                     
                 
             },

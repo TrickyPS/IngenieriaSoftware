@@ -17,6 +17,12 @@
 
 
 }
+
+.hei{
+  height: 200px !important;
+  background-color: black;
+}
+
 #imagenso {
     background-color: #161a1d;
     animation-name: example;

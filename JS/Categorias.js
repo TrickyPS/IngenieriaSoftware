@@ -5,19 +5,20 @@ var email = localStorage.getItem("email");
 debugger
 
 if(id_user >0){
-if(is_role == "CLIENT"){
-    $("#sesionregistrate").addClass("d-none");
-    $("#sesioninicia").addClass("d-none");
-    $("#infocuenta").removeClass("d-none");
-    $("#cuenn").html(email)
-
-}else{
-    $("#sesionregistrate").addClass("d-none");
-    $("#sesioninicia").addClass("d-none");
-    $("#categoriasi").addClass("d-none");
-
-}
-
+    if(is_role == "CLIENT"){
+        $("#sesionregistrate").addClass("d-none");
+        $("#sesioninicia").addClass("d-none");
+        $("#infocuenta").removeClass("d-none");
+        $("#cuenn").html(email)
+    
+    }else{
+        $("#sesionregistrate").addClass("d-none");
+        $("#sesioninicia").addClass("d-none");
+        $("#infocuenta").removeClass("d-none");
+        $("#admins").removeClass("d-none");
+        $("#cuenn").html(email)
+    
+    }
 }else{
 
 
@@ -26,7 +27,7 @@ if(is_role == "CLIENT"){
 
  $.ajax({
     type: "GET",
-    url: "https://is-fcfm.alwaysdata.net/api/categoria/index.php",
+    url: "http://uanlis.alwaysdata.net/api/categoria/index.php",
     data:{action:"allCategories"},
     dataType: 'json',
     success: function(data){
@@ -45,7 +46,7 @@ if(is_role == "CLIENT"){
 
     },error:function(x,y,z){
 debugger
-    //  location.href = "IndexNuevo.php";
+ 
       
     }
   });
@@ -56,7 +57,7 @@ function AleatB(){
     $.ajax({
         type: "GET",
         
-        url: "https://is-fcfm.alwaysdata.net/api/producto/index.php",
+        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
         data:{action:"getAllPM",id:id_P},
         dataType: 'json',
         success: function(data){
@@ -67,10 +68,10 @@ function AleatB(){
            var  i =0;
      for(var prop of inir){ 
         $(".cats").append(`<div class=" col-lg-3 col-md-3 col-sm-6">
-        <div class="product-grid">
+        <div class="product-grid hei">
             <div class="product-image">
                 <a href="#">
-                    <img class="pic-1" src="../IMG/python.png">
+                    <img class="pic-1 " src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
 
                 </a>
                 <ul class="social">
@@ -95,7 +96,7 @@ function AleatB(){
     
         },error:function(x,y,z){
     debugger
-        //  location.href = "IndexNuevo.php";
+       
           
         }
       });
@@ -106,7 +107,7 @@ function AleatB(){
 function Aleat(){
     $.ajax({
         type: "GET",
-        url: "https://is-fcfm.alwaysdata.net/api/producto/index.php",
+        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
         data:{action:"getAllPNR"},
         dataType: 'json',
         success: function(data){
@@ -116,10 +117,10 @@ function Aleat(){
            var  i =0;
      for(var prop of inir){ 
         $(".cats").append(`<div class=" col-lg-3 col-md-3 col-sm-6">
-        <div class="product-grid">
+        <div class="product-grid hei">
             <div class="product-image">
                 <a href="#">
-                    <img class="pic-1" src="../IMG/python.png">
+                    <img class="pic-1 hei" src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
 
                 </a>
                 <ul class="social">
@@ -144,7 +145,7 @@ function Aleat(){
     
         },error:function(x,y,z){
     debugger
-        //  location.href = "IndexNuevo.php";
+       
           
         }
       });
@@ -157,7 +158,7 @@ $(document).ready(function () {
 
   $.ajax({
        type: "GET",
-       url: "https://is-fcfm.alwaysdata.net/api/producto/index.php",
+       url: "http://uanlis.alwaysdata.net/api/producto/index.php",
        data:{action:"getAllPNR"},
        dataType: 'json',
        success: function(data){
@@ -176,12 +177,12 @@ $(document).ready(function () {
    
        },error:function(x,y,z){
    debugger
-       //  location.href = "IndexNuevo.php";
+   
          
        }  });            
     $.ajax({
         type: "GET",
-        url: "https://is-fcfm.alwaysdata.net/api/producto/index.php",
+        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
         data:{action:"getAllPNR"},
         dataType: 'json',
         success: function(data){
@@ -190,10 +191,10 @@ $(document).ready(function () {
            var  i =0;
      for(var prop of inir){ 
         $(".cats").append(`<div class=" pb-4 col-lg-3 col-md-3 col-sm-6">
-        <div class="product-grid">
+        <div class="product-grid hei">
             <div class="product-image">
                 <a href="#">
-                    <img class="pic-1" src="../IMG/python.png">
+                    <img class="pic-1 hei" src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
 
                 </a>
                 <ul class="social">
@@ -218,7 +219,7 @@ $(document).ready(function () {
     
         },error:function(x,y,z){
     debugger
-        //  location.href = "IndexNuevo.php";
+      
           
         }
       });
@@ -272,7 +273,7 @@ $(document).ready(function () {
       
             $.ajax({
                 type: "POST",
-                url: "https://is-fcfm.alwaysdata.net/api/auth/",
+                url: "http://uanlis.alwaysdata.net/api/auth/",
                 data: {action:"signIn",email:email,password:password},
                 dataType: "json",
                 success: function (response) {
@@ -335,7 +336,7 @@ $(document).ready(function () {
             //toastr.success('Bien', 'Te has registrado correctamente');
             $.ajax({
                 type: "POST",
-                url: "https://is-fcfm.alwaysdata.net/api/auth/",
+                url: "http://uanlis.alwaysdata.net/api/auth/",
                 data: {action:"signUp",username:name,email:email,password:password},
                 dataType: "json",
                 success: function (response) {
@@ -365,7 +366,7 @@ $(document).ready(function () {
 
     $.ajax({
         type:"GET",
-        url:"https://is-fcfm.alwaysdata.net/api/categoria/",
+        url:"http://uanlis.alwaysdata.net/api/categoria/",
         data:{action:"getAll"},
         dataType:"json",
         success: function(resp){
@@ -380,7 +381,7 @@ $(document).ready(function () {
 
     $.ajax({
         type:"GET",
-        url:"https://is-fcfm.alwaysdata.net/api/categoria/",
+        url:"http://uanlis.alwaysdata.net/api/categoria/",
         data:{action:"getAllPN"},
         dataType:"json",
         success: function(resp){

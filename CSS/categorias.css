@@ -30,7 +30,10 @@
     .pagination {
         display: inline-block;
       }
-      
+      .hei{
+        height: 200px !important;
+        background-color: black;
+      }
       .pagination a {
         color: black;
         float: left;
