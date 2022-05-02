@@ -37,7 +37,7 @@ var io = parseInt(it);
     /// PARA MOSTRAR UN PRODUCTO
     $.ajax({  
       type: "GET",
-      url: "http://uanlis.alwaysdata.net/api/producto/index.php",
+      url: "https://uanlis.alwaysdata.net/api/producto/index.php",
       data: {action:'getp',id:io},
       dataType: 'json',
       success: function(data){
@@ -47,16 +47,15 @@ var io = parseInt(it);
         $("#despi").html(e.description);
         $("#showp").html(e.precio);
         $("#showp").html(e.precio);
-        $("#im").append(`<img class="text-center" src="http://uanlis.alwaysdata.net/api/producto${e.imagen}"
+        $("#im").append(`<img class="text-center" src="https://uanlis.alwaysdata.net/api/producto${e.imagen}"
         style="object-fit:initial; height: 300px; width: 300px;">
     `);
 
-        http://uanlis.alwaysdata.net/api/producto${data[i].imagen}
        var pp = e.id_categoria;
 
        $.ajax({  
         type: "GET",
-        url: "http://uanlis.alwaysdata.net/api/categoria/index.php",
+        url: "https://uanlis.alwaysdata.net/api/categoria/index.php",
         data: {action:'all'},
         dataType: 'json',
         success: function(data2){
@@ -147,7 +146,7 @@ var boolean = true;
 
       $.ajax({
           type: "POST",
-          url: "http://uanlis.alwaysdata.net/api/auth/",
+          url: "https://uanlis.alwaysdata.net/api/auth/",
           data: {action:"signIn",email:email,password:password},
           dataType: "json",
           success: function (response) {
@@ -210,7 +209,7 @@ debugger
       //toastr.success('Bien', 'Te has registrado correctamente');
       $.ajax({
           type: "POST",
-          url: "http://uanlis.alwaysdata.net/api/auth/",
+          url: "https://uanlis.alwaysdata.net/api/auth/",
           data: {action:"signUp",username:name,email:email,password:password},
           dataType: "json",
           success: function (response) {

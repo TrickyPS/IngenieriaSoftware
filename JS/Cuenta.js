@@ -30,7 +30,7 @@ $(document).ready(function () {
 
 $.ajax({
     type: "POST",
-    url: "http://uanlis.alwaysdata.net/api/user/",
+    url: "https://uanlis.alwaysdata.net/api/user/",
     data:{action:"getuse",id:id_user},
     dataType: 'json',
     success: function(reponse){
@@ -76,7 +76,7 @@ debugger
 
         $.ajax({
             type: "POST",
-            url: "http://uanlis.alwaysdata.net/api/auth/",
+            url: "https://uanlis.alwaysdata.net/api/auth/",
             data: {action:"signIn",email:email,password:password},
             dataType: "json",
             success: function (response) {
@@ -147,7 +147,7 @@ $("#rerto").submit(function (e) {
         //toastr.success('Bien', 'Te has registrado correctamente');
         $.ajax({
             type: "POST",
-            url: "http://uanlis.alwaysdata.net/api/auth/",
+            url: "https://uanlis.alwaysdata.net/api/auth/",
             data: {action:"signUp",username:name,email:email,password:password},
             dataType: "json",
             success: function (response) {
@@ -198,7 +198,7 @@ debugger
     }else{
         $.ajax({
             type: "POST",
-            url: "http://uanlis.alwaysdata.net/api/user/",
+            url: "https://uanlis.alwaysdata.net/api/user/",
             data:{action:"updateUser",id:id_user,username:names,password:passwordn,oldpassword:password},
             headers: {"Authorization":"Bearer " + token},
             dataType: 'json',

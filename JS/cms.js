@@ -9,7 +9,7 @@ debugger
     $.ajax({
         type: "GET",
         enctype: "multipart/form-data",
-        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
+        url: "https://uanlis.alwaysdata.net/api/producto/index.php",
         data: {action:'getAllUS'}, 
         dataType:"json",
         success: function (reponse) {
@@ -50,7 +50,7 @@ for( var i = 0 ; i < 15 ; i++){
 
     $.ajax({
         type: "GET",
-        url: "http://uanlis.alwaysdata.net/api/categoria/index.php",
+        url: "https://uanlis.alwaysdata.net/api/categoria/index.php",
         data:{action:"allCategories"},
         dataType: 'json',
         success: function(data){
@@ -104,7 +104,7 @@ debugger
         $.ajax({
             type: "POST",
             enctype: "multipart/form-data",
-            url: "http://uanlis.alwaysdata.net/api/producto/",
+            url: "https://uanlis.alwaysdata.net/api/producto/",
             data: formData, 
             dataType:"json",
             headers: {"Authorization":"Bearer " + token},

@@ -27,7 +27,7 @@ if(id_user >0){
 
  $.ajax({
     type: "GET",
-    url: "http://uanlis.alwaysdata.net/api/categoria/index.php",
+    url: "https://uanlis.alwaysdata.net/api/categoria/index.php",
     data:{action:"allCategories"},
     dataType: 'json',
     success: function(data){
@@ -57,7 +57,7 @@ function AleatB(){
     $.ajax({
         type: "GET",
         
-        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
+        url: "https://uanlis.alwaysdata.net/api/producto/index.php",
         data:{action:"getAllPM",id:id_P},
         dataType: 'json',
         success: function(data){
@@ -107,7 +107,7 @@ function AleatB(){
 function Aleat(){
     $.ajax({
         type: "GET",
-        url: "http://uanlis.alwaysdata.net/api/producto/index.php",
+        url: "https://uanlis.alwaysdata.net/api/producto/index.php",
         data:{action:"getAllPNR"},
         dataType: 'json',
         success: function(data){
@@ -158,7 +158,7 @@ $(document).ready(function () {
 
   $.ajax({
        type: "GET",
-       url: "http://uanlis.alwaysdata.net/api/producto/index.php",
+       url: "https://uanlis.alwaysdata.net/api/producto/index.php",
        data:{action:"getAllPNR"},
        dataType: 'json',
        success: function(data){
@@ -273,7 +273,7 @@ $(document).ready(function () {
       
             $.ajax({
                 type: "POST",
-                url: "http://uanlis.alwaysdata.net/api/auth/",
+                url: "https://uanlis.alwaysdata.net/api/auth/",
                 data: {action:"signIn",email:email,password:password},
                 dataType: "json",
                 success: function (response) {
@@ -336,7 +336,7 @@ $(document).ready(function () {
             //toastr.success('Bien', 'Te has registrado correctamente');
             $.ajax({
                 type: "POST",
-                url: "http://uanlis.alwaysdata.net/api/auth/",
+                url: "https://uanlis.alwaysdata.net/api/auth/",
                 data: {action:"signUp",username:name,email:email,password:password},
                 dataType: "json",
                 success: function (response) {
@@ -366,7 +366,7 @@ $(document).ready(function () {
 
     $.ajax({
         type:"GET",
-        url:"http://uanlis.alwaysdata.net/api/categoria/",
+        url:"https://uanlis.alwaysdata.net/api/categoria/",
         data:{action:"getAll"},
         dataType:"json",
         success: function(resp){
@@ -381,7 +381,7 @@ $(document).ready(function () {
 
     $.ajax({
         type:"GET",
-        url:"http://uanlis.alwaysdata.net/api/categoria/",
+        url:"https://uanlis.alwaysdata.net/api/categoria/",
         data:{action:"getAllPN"},
         dataType:"json",
         success: function(resp){
