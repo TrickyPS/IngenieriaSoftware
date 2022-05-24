@@ -68,23 +68,24 @@ function AleatB(){
            var  i =0;
      for(var prop of inir){ 
         $(".cats").append(`<div class=" col-lg-3 col-md-3 col-sm-6">
-        <div class="product-grid hei">
+        <div class="product-grid hei" style="font-family: 'Bebas Neue' !important">
             <div class="product-image">
                 <a href="#">
-                    <img class="pic-1 " src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
+                    <img class="pic-1 hei" src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
 
                 </a>
-                <ul class="social">
-                    <li><a href="curso.html" data-tip="Ver Producto"><i class="fa fa-search"></i></a></li>
-                    
-                </ul>
+            
               
 
             </div>
-      
+       
             <div class="product-content">
-                <h3 class="title"><a href="#">${inir[i].nombre}</a></h3>
-                <div class="price pb-2">${inir[i].precio}
+            <ul class="social">
+            <li><a class="mb-5" onclick="location.href='producto.html?producto=${inir[i].id}'" data-tip="Ver Producto"><i class="fa fa-search"></i></a></li>
+            
+        </ul>
+                <h6 class="">${inir[i].nombre}</h6>
+                <div class="h6 pb-2">${inir[i].precio}
                     <span>$</span>
                 </div>
             </div>
@@ -117,23 +118,24 @@ function Aleat(){
            var  i =0;
      for(var prop of inir){ 
         $(".cats").append(`<div class=" col-lg-3 col-md-3 col-sm-6">
-        <div class="product-grid hei">
+        <div class="product-grid hei" style="font-family: 'Bebas Neue' !important">
             <div class="product-image">
                 <a href="#">
                     <img class="pic-1 hei" src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
 
                 </a>
-                <ul class="social">
-                    <li><a href="curso.html" data-tip="Ver Producto"><i class="fa fa-search"></i></a></li>
-                    
-                </ul>
+                
               
 
             </div>
       
             <div class="product-content">
-                <h3 class="title"><a href="#">${inir[i].nombre}</a></h3>
-                <div class="price pb-2">${inir[i].precio}
+            <ul class="social">
+                    <li><a class="mb-5" onclick="location.href='producto.html?producto=${inir[i].id}'" data-tip="Ver Producto"><i class="fa fa-search"></i></a></li>
+                    
+                </ul>
+                <h6 class="">${inir[i].nombre}</h6>
+                <div class="h6 pb-2">${inir[i].precio}
                     <span>$</span>
                 </div>
             </div>
@@ -191,23 +193,24 @@ $(document).ready(function () {
            var  i =0;
      for(var prop of inir){ 
         $(".cats").append(`<div class=" pb-4 col-lg-3 col-md-3 col-sm-6">
-        <div class="product-grid hei">
+        <div class="product-grid hei" style="font-family: 'Bebas Neue' !important">
             <div class="product-image">
                 <a href="#">
                     <img class="pic-1 hei" src="http://uanlis.alwaysdata.net/api/producto${inir[i].imagen}">
 
                 </a>
-                <ul class="social">
-                    <li><a href="curso.html" data-tip="Ver Producto"><i class="fa fa-search"></i></a></li>
-                    
-                </ul>
+             
               
 
             </div>
       
             <div class="product-content">
-                <h3 class="title"><a href="#">${inir[i].nombre}</a></h3>
-                <div class="price pb-2">${inir[i].precio}
+            <ul class="social">
+            <li><a class="mb-5" onclick="location.href='producto.html?producto=${inir[i].id}'" data-tip="Ver Producto"><i class="fa fa-search"></i></a></li>
+            
+        </ul>
+                <h6 class="">${inir[i].nombre}</h6>
+                <div class="h6 pb-2">${inir[i].precio}
                     <span>$</span>
                 </div>
             </div>

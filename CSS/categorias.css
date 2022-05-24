@@ -58,9 +58,22 @@
      
    }
 
+
+   .button {
+    border-radius: 4px;
+    background-color: #2b2d33;
+    border: none;
+    color: #FFFFFF;
+    font-size: 28px;
+    max-height: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    zoom: 133332px !important;
+  }
+
    .navi{
 
-    background-color: #374a69;
+    background-color: #1f2125;
  
  transition: all .5s ease;
  

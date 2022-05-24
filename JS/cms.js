@@ -92,37 +92,47 @@ debugger
     debugger
     if (boolean == true) {
         //var files = avatar; //$('#updateAvatar')[0].files[0];
-        var formData = new FormData();
-        formData.append('imagen',image[0]);
-        formData.append('action',"add");
-        formData.append('nombre',name);
-        formData.append('precio',precio);
-        formData.append('description',descrip);
-        formData.append('marca',marca);
-        formData.append('categoria',marca);
-        debugger
-        $.ajax({
-            type: "POST",
-            enctype: "multipart/form-data",
-            url: "https://uanlis.alwaysdata.net/api/producto/",
-            data: formData, 
-            dataType:"json",
-            headers: {"Authorization":"Bearer " + token},
-            processData: false, 
-            contentType:false,
-            success: function (response) {
-               debugger
+        if(image[0] == null || name == null || precio == null || descrip == null || marca == null){
+            toastr.error('Error','Ingresa los datos correctamente')
             
-               document.getElementById("formProducto").reset();
-                    
+        }
+        else{
+            var formData = new FormData();
+            formData.append('imagen',image[0]);
+            formData.append('action',"add");
+            formData.append('nombre',name);
+            formData.append('precio',precio);
+            formData.append('description',descrip);
+            formData.append('marca',marca);
+            formData.append('categoria',marca);
+            debugger
+            
+            $.ajax({
+                type: "POST",
+                enctype: "multipart/form-data",
+                url: "https://uanlis.alwaysdata.net/api/producto/",
+                data: formData, 
+                dataType:"json",
+                headers: {"Authorization":"Bearer " + token},
+                processData: false, 
+                contentType:false,
+                success: function (response) {
+                   debugger
                 
-            },
-            error: function (x, y, z) {
-                debugger
-                alert(x);
-                toastr.error('Error', 'Eror interno al actualizar usuario');
-            }
-        });
+                   document.getElementById("formProducto").reset();
+                        
+                    
+                },
+                error: function (x, y, z) {
+                    debugger
+                    alert(x);
+                    toastr.error('Error', 'Eror interno al actualizar usuario');
+                }
+            });
+
+            
+        }
+  
     }
     }
     function parseJwt (token) {
