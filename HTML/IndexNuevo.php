@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
-<!-- jolj -->
+  <!-- jolj -->
   <!--  Link de css -->
   <link rel="stylesheet" href="../CSS/IndexNuevo.css">
   <!-- Bootstrap CSS -->
@@ -19,8 +19,8 @@
     integrity="sha512-i+WzzATeaDcwcfi5CfLn63qBxrKqiQvDLC+IChU1zVlaPguPgJlddOR07nU28XOoIOno9WPmJ+3ccUInpmHxBg=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-
-   
+ <!--Ya es lo ultimo que hacemos pa, hay que estar felices.
+PD: chupate un limon perro-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
   <!-- FONTS -->
@@ -34,15 +34,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
-  <title>Shoe up</title>
+  <title>Dressup</title>
 </head>
-
 <body>
   <nav class="navbar navi  navbar-expand-lg navbar-light fixed-top" id="_cartelera">
     <div class="namep pt-0">
-      <a class="variable zoom variable negro pr-5 navbar-brand titulo"
-      href="../HTML/IndexNuevo.html"
-        style="color: whitesmoke; font-family: 'Bebas Neue', cursive; font-size: 25px;">Shoe Up</a>
+      <a class="variable zoom variable negro  navbar-brand titulo" href="../HTML/IndexNuevo.html"
+        style="color: whitesmoke; font-family: 'Bebas Neue', cursive; font-size: 25px;">Dress Up</a>
+      <img style="border-radius: 50%;width: 34px;" class="mr-2 pr-1 mb-2" src="./../IMG/ROPA/4_84292.png" alt=""><span
+        id="cuenn"></span>
     </div>
 
     <button id="botonazo" class=" navbar-toggler" type="button" data-toggle="collapse"
@@ -56,46 +56,38 @@
         <input class="buscador form-control input-group-sm mr-sm-2 justify-content-center" type="search"
           placeholder="Busca algun producto..." aria-label="Search"
           style="width: 260px; font-family: 'Yanone Kaffeesatz', sans-serif; font-size: small;">
-            <button  class=" p1p btn button mt-0 ml-1 zoom" id="botonsearch" type="submit"
+        <button class=" p1p btn button mt-0 ml-1 zoom" id="botonsearch" type="submit"
           style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: small;">Buscar</button>
 
       </form>
       <div class="grupo ml-auto">
         <ul class="navbar-nav text-center mx-auto mt-2"
           style="flex-direction: row; justify-content: space-evenly; font-family: 'Yanone Kaffeesatz', sans-serif;;">
-
-         
-        
-
-          <a style="font-family: 'Bebas Neue' !important"  class="zoom btn  palab cdp nav-link" data-toggle="modal" data-target="#exampleModal" id="sesioninicia">
+            <!-- PARA INICIAR SESION -->
+          <a style="font-family: 'Bebas Neue' !important" class="zoom btn  palab cdp nav-link" data-toggle="modal"
+            data-target="#exampleModal" id="sesioninicia">
             Inicia sesion
           </a>
-
-          <a style="font-family: 'Bebas Neue' !important" class="zoom btn  palab cdp nav-link" data-toggle="modal" data-target="#exampleModal2"
-            id="sesionregistrate">
+           <!-- PARA REGISTRARTE -->
+          <a style="font-family: 'Bebas Neue' !important" class="zoom btn  palab cdp nav-link" data-toggle="modal"
+            data-target="#exampleModal2" id="sesionregistrate">
             Registrate
           </a>
-
-          <a style="font-family: 'Bebas Neue' !important" class="zoom btn  palab cdp nav-link" id="categoriasi" href="../HTML/categorias.html">
-          Categorias
-        </a>
-
-        
-
-
-
+          <a style="font-family: 'Bebas Neue' !important" class="zoom btn  palab cdp nav-link" id="categoriasi"
+            href="../HTML/categorias.html">
+            Categorias
+          </a>
           <li class="nav-item d-none" id="infocuenta" style="font-family: 'Bebas Neue' !important">
-
-            <a class="zoom cdp nav-link dropdown-toggle" href="#" id="sesionperfil" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img style="border-radius: 50%;width: 24px;" class="mr-2"  src="./../IMG/user.png" alt=""><span id="cuenn"></span>
+            <a class="zoom cdp nav-link dropdown-toggle" href="#" id="sesionperfil" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img style="border-radius: 50%;width: 24px;" class="mr-2" src="./../IMG/user.png" alt=""><span
+                id="cuenn"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <a class="dropdown-item " id="noadmins" href="../HTML/Cuenta.html">Mi Cuenta</a>
               <a class="variable dropdown-item d-none" id="admins" href="../HTML/cms.html">Cms</a>
-             
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item btn"  onclick="cerrarsesion();">Cerrar
+              <a class="dropdown-item btn" onclick="cerrarsesion();">Cerrar
                 sesión</a>
               <script>
                 function cerrarsesion() {
@@ -111,132 +103,199 @@
     </div>
   </nav>
   <section class="inicio   shadow" id="home" data-scroll-index="0">
-
-      <div class="mt-0 row row-inicio align-items-center" style="font-family: 'Bebas Neue'">
-        <div class="col-lg-7 col-md-7 col-sm-12">
-          <div class="inicio-text text-center mt-5">
-            <h1>Bienvenido a shoe UP</h1>
-            <p style="font-size: 30px;">
-              La mejor plataforma de venta de tenis en mexico
-            </p>
-            <button onclick="location.href = 'categorias.html'" class="p1p btn button zoom" id="botonsearch" type="submit"
-              style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: large;">Ver Marcas</button>
-          </div>
+    <div class="mt-0 row row-inicio align-items-center" style="font-family: 'Bebas Neue'">
+      <div class="col-lg-7 col-md-7 col-sm-12">
+        <div class="inicio-text text-center mt-5">
+          <h1 style="color: rgb(255, 255, 255); font-size: 35px; ">Bienvenido a Dress UP</h1>
+          <p style="font-size: 30px; color: rgb(255, 255, 255);">
+            La mejor plataforma de venta de ropa deportiva en mexico
+          </p>
+          <button class="p1p btn button zoom" id="botonsearch" type="submit"
+            style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: large;">Ver Marcas</button>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-12 inicioDer" style="padding:0%;">
-          <div class="pt-3 row-inicio align-items-center text-center">
-            <div class=" pl-0  col-lg-12 col-md-12 col-sm-12">
-              <div id="carouselExampleIndicators" class="mt-4 carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="test " src="../IMG/nikee.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="test" src="../IMG/adidas.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="test" src="../IMG/jordan.png" alt="Third slide">
-                  </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-12 inicioDer" style="padding:0%;">
+        <div class="pt-3 row-inicio align-items-center text-center">
+          <div class=" pl-0  col-lg-12 col-md-12 col-sm-12">
+            <div id="carouselExampleIndicators" class="mt-4 carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="test " src="../IMG/ROPA/ropa-jordan-730x420.jpg" alt="First slide">
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+                <div class="carousel-item">
+                  <img class="test" src="../IMG/ROPA/adidas-neighborhood-portada-900x600.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="test" src="../IMG/ROPA/nike-branded-apparel-coleccion-de-ropa-hoodie-chandal.jpg"
+                    alt="Third slide">
+                </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-   
+    </div>
   </section>
-
   <section class="categorias pb-5" style="background-color: rgb(239, 242, 245);">
     <div class="text-center pt-4">
-      <h1 style="font-family:'Bebas Neue'; color: rgb(0, 0, 0);">Recomendados para ti NombreUser</h1>
+      <h1 style="font-family:'Bebas Neue'; color: rgb(0, 0, 0);">Recomendados para ti Campeon</h1>
     </div>
-
     <div class="container pt-0" id="_productos">
       <div class="splide pt-3 d-flex mx-auto justify-content-center col-lg-12 col-md-12 col-sm-12 " id="splide"
         style="font-family: 'Bebas Neue'">
         <div class="splide__track " style="border-radius: 10px">
           <ul class="splide__list">
             <li class="splide__slide p-2 d-flex flex-row" id="splide-slide01" style="background-color:#383a41">
-          
+              <div class="col-lg-4 col-md-3 col-sm-12  pt-2">
+                <div class="hei imagen text-center" style="border-color: white !important;;">
+                  <img src="../IMG/ROPA/playera-adidas-designed-2-move-logo-is-FL0302-1.png"
+                    style="height: 200px; width: 200px;">
+                </div>
+                <div class="stats mt-2 text-center">
+                  <div class="mx-auto p-price" style="color: white;">
+                    <h4>Playera Adidas Roja</h4>
+                    <span>Precio</span>
+                    <p class="lead" style="color: white;">
+                      <span>$600</span>
+                    </p>
+                    <button style="font-family: 'Bebas Neue'; background-color: rgb(100, 100, 96);  color: white;"
+                      class="p1p btn mt-3 mb-4 zoom" type="submit"
+                      onclick="location.href='producto.html?producto=${data[i].id}';">ver producto</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12  pt-2">
+                <div class="hei imagen text-center" style="border-color: white !important;;">
+                  <img
+                    src="../IMG/ROPA/manchester-united-home-shirt-2019-20-kids_ss4_p-11980596+u-1892l8okcjkc9wau5gah+v-ba15695fdf464369b589128959c31f38.jpg"
+                    style="height: 200px; width: 200px;">
+                </div>
+                <div class="stats mt-2 text-center">
+                  <div class="mx-auto p-price" style="color: white;">
+                    <h4>Playera Manchester United</h4>
+                    <span>Precio</span>
+                    <p class="lead" style="color: white;">
+                      <span>$1700</span>
+                    </p>
+                    <button style="font-family: 'Bebas Neue'; background-color: rgb(100, 100, 96);  color: white;"
+                      class="p1p btn mt-3 mb-4 zoom" type="submit"
+                      onclick="location.href='producto.html?producto=${data[i].id}';">ver producto</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12  pt-2">
+                <div class="hei imagen text-center" style="border-color: white !important;;">
+                  <img src="../IMG/ROPA/pdg.jpg" style="height: 200px; width: 200px;">
+                </div>
+                <div class="stats mt-2 text-center">
+                  <div class="mx-auto p-price" style="color: white;">
+                    <h4>Playera PSG</h4>
+                    <span>Precio</span>
+                    <p class="lead" style="color: white;">
+                      <span>$1800</span>
+                    </p>
+                    <button style="font-family: 'Bebas Neue'; background-color: rgb(100, 100, 96);  color: white;"
+                      class="p1p btn mt-3 mb-4 zoom" type="submit"
+                      onclick="location.href='producto.html?producto=${data[i].id}';">ver producto</button>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="splide__slide p-2 d-flex flex-row" id="splide-slide02" style="background-color:#383a41">
-          
-            </li>
-          
-            <li class="splide__slide p-2 d-flex flex-row" id="splide-slide03" style="background-color:#383a41">
-          
+              <div class="col-lg-4 col-md-3 col-sm-12  pt-2">
+                <div class="hei imagen text-center" style="border-color: white !important;;">
+                  <img src="../IMG/ROPA/pants.jpg" style="height: 200px; width: 200px;">
+                </div>
+                <div class="stats mt-2 text-center">
+                  <div class="mx-auto p-price" style="color: white;">
+                    <h4>Pants Adidas Flex</h4>
+                    <span>Precio</span>
+                    <p class="lead" style="color: white;">
+                      <span>$999</span>
+                    </p>
+                    <button style="font-family: 'Bebas Neue'; background-color: rgb(100, 100, 96);  color: white;"
+                      class="p1p btn mt-3 mb-4 zoom" type="submit"
+                      onclick="location.href='producto.html?producto=${data[i].id}';">ver producto</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12  pt-2">
+                <div class="hei imagen text-center" style="border-color: white !important;;">
+                  <img src="../IMG/ROPA/tenis-nike-lebron-witness-4-is-CV4004-400-1.png"
+                    style="height: 200px; width: 200px;">
+                </div>
+                <div class="stats mt-2 text-center">
+                  <div class="mx-auto p-price" style="color: white;">
+                    <h4>Tenis Nike Lebron James</h4>
+                    <span>Precio</span>
+                    <p class="lead" style="color: white;">
+                      <span>$2399</span>
+                    </p>
+                    <button style="font-family: 'Bebas Neue'; background-color: rgb(100, 100, 96);  color: white;"
+                      class="p1p btn mt-3 mb-4 zoom" type="submit"
+                      onclick="location.href='producto.html?producto=${data[i].id}';">ver producto</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-3 col-sm-12  pt-2">
+                <div class="hei imagen text-center" style="border-color: white !important;;">
+                  <img src="../IMG/ROPA/mochila-adidas-classic-3-franjas-is-FJ9267-1.png"
+                    style="height: 200px; width: 200px;">
+                </div>
+                <div class="stats mt-2 text-center">
+                  <div class="mx-auto p-price" style="color: white;">
+                    <h4>Mochila Adidas</h4>
+                    <span>Precio</span>
+                    <p class="lead" style="color: white;">
+                      <span>$1400</span>
+                    </p>
+                    <button style="font-family: 'Bebas Neue'; background-color: rgb(100, 100, 96);  color: white;"
+                      class="p1p btn mt-3 mb-4 zoom" type="submit"
+                      onclick="location.href='producto.html?producto=${data[i].id}';">ver producto</button>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </div>
-
-      <div class="splide__progress">
-        <div class="splide__progress__bar">
-        </div>
-      </div>
     </div>
-
     <div class="text-center pt-4">
       <h1 style="font-family:'Bebas Neue'; color: rgb(0, 0, 0);">Productos recientes </h1>
     </div>
-
     <div class="container px-4 px-lg-5 mt-5" style="font-family:'Bebas Neue';">
       <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="recient">
-     
-       
-
       </div>
     </div>
-
-
-
   </section>
-
-
-
-
-
-
-
-
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-
       new Splide('.splide').mount();
-
       var elms = document.getElementsByClassName('.splide');
       for (var i = 0, len = elms.length; i < len; i++) {
         new Splide(elms[i]).mount();
       }
-
       var splide = new Splide('#splide');
-
       splide.on('autoplay:playing', function (rate) {
         console.log(rate);
       });
-
       splide.mount();
-
-
-
-
     });
   </script>
-  <!-- Modal -->
+  <!-- Modal DE INICIO DE SESION -->
   <div class="modal fade modalon mt-5 p-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true" style="font-family: 'Bebas Neue'">
     <div class="modal-dialog modal-dialog-centered " style="width:700px;">
@@ -249,8 +308,6 @@
             <div class="form-title text-center">
               <h4>Inicia sesión</h4>
             </div>
-
-
             <form id="rertol" accept-charset="utf-8" style="font-family: 'Archivo Narrow', sans-serif;">
               <div class="form-group pl-5 pr-5">
                 <a>Correo electronico</a>
@@ -262,22 +319,16 @@
                 <input type="password" class="form-control" id="passwordi" name="passwordl"
                   placeholder="Ingresa tu contraseña">
               </div>
-
               <button type="submit" class="zoom btn btn-primary btn-md d-block mx-auto">Inicia sesion</button>
-
             </form>
-
-
             <div class="text-center text-muted delimiter pt-2">Sigue nuestras redes sociales</div>
             <div class="text-center pt-5">
               <a class="text-muted text-hover-primary " href="#" target="_blank" title="instagram">
                 <i class="fab fa-instagram p-1" style="font-size: 25px;"></i>
               </a>
-
               <a class="text-muted text-hover-primary p-1" href="#" target="_blank" title="facebook">
                 <i class="fab fa-facebook" style="font-size: 25px;"></i>
               </a>
-
               <a class="text-muted text-hover-primary p-1" href="#" target="_blank" title="twitter">
                 <i class="fab fa-twitter" style="font-size: 25px;"></i>
               </a>
@@ -287,8 +338,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Modal -->
+  <!-- Modal REGISTRARSE AQUI VA ESA PARTE -->
   <div class="modal fade modalon mt-5" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true" style="font-family: 'Bebas Neue'">
     <div class="modal-dialog modal-dialog-centered  " style="width:700px;">
@@ -338,7 +388,6 @@
       </div>
     </div>
   </div>
-
   <div class="footer-basic" style="background-color: rgb(46, 44, 44); color: white;">
     <footer>
       <div class="social"><a href="#"><i class="fab fa-instagram"></i></i></a><a href="#"><i
@@ -351,10 +400,9 @@
         <li class="list-inline-item"><a href="#">Terms</a></li>
         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
       </ul>
-      <p class="copyright">Shoe UP © 2022</p>
+      <p class="copyright">Dressup © 2022</p>
     </footer>
   </div>
-
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
